@@ -26,6 +26,10 @@ class GUI:
 		update_btn = tk.Button(text="update",command=self.update_with_volume)
 		update_btn.pack()
 
+		pythagore_photo = tk.PhotoImage(file="res/pythagore.png").subsample(10,10)
+		pythagore_btn = tk.Button(root, image=pythagore_photo)
+		pythagore_btn.pack()
+
 		root.mainloop()
 
 	def update_with_volume(self):
