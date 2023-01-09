@@ -27,8 +27,17 @@ class GUI:
 		update_btn.pack()
 
 		pythagore_photo = tk.PhotoImage(file="res/pythagore.png").subsample(10,10)
-		pythagore_btn = tk.Button(root, image=pythagore_photo)
+		pythagore_btn = tk.Button(root, image=pythagore_photo, command= lambda: pythagore(label))
 		pythagore_btn.pack()
+
+		input_windows = tk.Entry(root)
+		input_windows.pack()
+
+		label = tk.Label(root, text="Rien a dire")
+		label.pack()
+
+		send_button = tk.Button(root, text="Send", command= lambda: input_windows.get())
+		send_button.pack()
 
 		root.mainloop()
 
