@@ -10,7 +10,7 @@ class GUI:
 		root = tk.Tk()
 
 		root.title("C3-PELO")
-		root.geometry('300x200+50+50')
+		root.geometry('300x300+50+50')
 
 		mute_photo = tk.PhotoImage(file="res/mute.png").subsample(10,10)
 		mute_btn = tk.Button(root, image=mute_photo, command= lambda: self.volume.SetMute(1, None))

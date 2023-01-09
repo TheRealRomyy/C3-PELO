@@ -3,3 +3,9 @@ def get_volume(volume):
 	vol = vol * 100 # To percentage
 	vol = round(vol) # Round it
 	return f"{vol}%" # Add the %
+
+def pythagore():
+	print()
+
+
+	
