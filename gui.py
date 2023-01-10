@@ -5,6 +5,7 @@ class GUI:
 	def __init__(self, volume):
 		self.volume = volume
 		self.display_volume_label = None
+		self.pythagore_result = None
 
 	def buildGUI(self):
 		root = tk.Tk()
@@ -36,7 +37,7 @@ class GUI:
 		label = tk.Label(root, text="Rien a dire")
 		label.pack()
 
-		send_button = tk.Button(root, text="Send", command= lambda: input_windows.get())
+		send_button = tk.Button(root, text="Send", command=lambda: self.pythagore_result := input_windows.get())
 		send_button.pack()
 
 		root.mainloop()

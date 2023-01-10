@@ -2,10 +2,10 @@
 from math import *
 
 class Pythagore:
-	def main_pythagore(label):
+	def main_pythagore(label, result):
 		# Demander ce qu'on veut calculer
 		label["text"] = "Que voulez vous calculer ? \n \n1: L'hyphothènuse \n2: Un côté"
-		toCalc = input()
+		toCalc = result
 		
 		# Vérifier si toCalc n'est ni 2 ni 1
 		if toCalc != "1" and toCalc != "2":
