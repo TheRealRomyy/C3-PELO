@@ -1,5 +1,6 @@
 import tkinter as tk
 from utils.functions import *
+from utils.pythagore import Pythagore
 
 class GUI:
 	def __init__(self, volume):
@@ -28,7 +29,7 @@ class GUI:
 		update_btn.pack()
 
 		pythagore_photo = tk.PhotoImage(file="res/pythagore.png").subsample(10,10)
-		pythagore_btn = tk.Button(root, image=pythagore_photo, command= lambda: pythagore(label))
+		pythagore_btn = tk.Button(root, image=pythagore_photo, command=lambda: Pythagore.main_pythagore(label))
 		pythagore_btn.pack()
 
 		input_windows = tk.Entry(root)
@@ -37,10 +38,13 @@ class GUI:
 		label = tk.Label(root, text="Rien a dire")
 		label.pack()
 
-		send_button = tk.Button(root, text="Send", command=lambda: self.pythagore_result := input_windows.get())
+		send_button = tk.Button(root, text="Send", command=lambda: )
 		send_button.pack()
 
 		root.mainloop()
 
 	def update_with_volume(self):
 		self.display_volume_label["text"] = get_volume(self.volume)
+
+	def pytha(self):
+		self.pythagore_result = input_windows.get()
