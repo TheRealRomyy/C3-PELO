@@ -14,10 +14,12 @@ class GUI:
 		root.title("C3-PELO")
 		root.geometry('500x500+50+50')
 
+		# Mute button
 		mute_photo = tk.PhotoImage(file="res/mute.png").subsample(10,10)
 		mute_btn = tk.Button(root, image=mute_photo, command= lambda: self.volume.SetMute(1, None))
 		mute_btn.pack()
 
+		# Unmute button
 		unmute_photo = tk.PhotoImage(file="res/unmute.png").subsample(10,10)
 		unmute_btn = tk.Button(root, image=unmute_photo, command= lambda: self.volume.SetMute(0, None))
 		unmute_btn.pack()
@@ -25,17 +27,21 @@ class GUI:
 		self.display_volume_label = tk.Label(text=get_volume(self.volume))
 		self.display_volume_label.pack()
 
+		# Update volume
 		update_btn = tk.Button(text="update",command=self.update_with_volume)
 		update_btn.pack()
 
+				# Input windows
 		input_windows = tk.Entry(root)
 		input_windows.pack()
 
-		label = tk.Label(root, text="Rien a dire")
+		# Label
+		label = tk.Label(root)
 		label.pack()
 
 		pythagore = Pythagore(label, input_windows)
 
+		# Start pythagore button
 		pythagore_photo = tk.PhotoImage(file="res/pythagore.png").subsample(10,10)
 		pythagore_btn = tk.Button(root, image=pythagore_photo, command=lambda: pythagore.first_display())
 		pythagore_btn.pack()
