@@ -46,6 +46,7 @@ class GUI:
 		pythagore_btn = tk.Button(root, image=pythagore_photo, command=lambda: pythagore.first_display())
 		pythagore_btn.pack()
 
+		# Send button
 		send_button = tk.Button(root, text="Entre trait", command=lambda: pythagore.result())
 		send_button.pack()
 
