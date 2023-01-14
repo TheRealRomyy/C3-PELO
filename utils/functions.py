@@ -3,3 +3,11 @@ def get_volume(volume):
 	vol = vol * 100 # To percentage
 	vol = round(vol) # Round it
 	return f"{vol}%" # Add the %
+
+def show_elements(self, *elements):
+	for element in elements:
+		element.lift(self.frame)
+
+def hide_elements(self, *elements):
+	for element in elements:
+		element.lower(self.frame)
